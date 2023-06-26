@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\productController;
 use App\Http\Controllers\ProductSuperCategoryController;
 use App\Models\ProductSuperCategory;
 use Illuminate\Support\Facades\Route;
@@ -19,4 +20,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("parser", [ProductSuperCategoryController::class, "index"]);
+// Route::get("parser", [ProductSuperCategoryController::class, "index"]);
+Route::get("parser", [productController::class, "pc_notebooky"]);
